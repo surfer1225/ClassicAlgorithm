@@ -3,7 +3,7 @@ package DJS;
 import java.util.List;
 
 /**
- * Created by yaowenchi on 5/5/18.
+ * Created by Ryan on 5/5/18.
  */
 public class Graph {
     private List<Vertex> vertexes;

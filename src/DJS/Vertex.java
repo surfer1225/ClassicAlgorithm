@@ -1,7 +1,7 @@
 package DJS;
 
 /**
- * Created by yaowenchi on 5/5/18.
+ * Created by Ryan on 5/5/18.
  */
 public class Vertex {
     private String id;

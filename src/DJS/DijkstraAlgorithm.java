@@ -3,7 +3,7 @@ package DJS;
 import java.util.*;
 
 /**
- * Created by yaowenchi on 5/5/18.
+ * Created by Ryan on 5/5/18.
  */
 public class DijkstraAlgorithm {
     private final List<Vertex> nodes;
