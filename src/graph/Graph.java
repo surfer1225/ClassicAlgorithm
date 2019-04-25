@@ -1,6 +1,7 @@
 package graph;
 
 import java.util.LinkedList;
+import java.util.Queue;
 
 public class Graph {
     int v;// number of vertices
@@ -15,7 +16,43 @@ public class Graph {
 
     public void addEdge(int src, int dest) {
         this.adjListArr[src].add(dest);
-        this.adjListArr[dest].add(src);
+        // add the other direction if it is an undirected graph
+        // this.adjListArr[dest].add(src);
+    }
+
+    public void BFS(int s) {
+        boolean[] visited = new boolean[this.v];
+
+        Queue<Integer> q = new LinkedList<>();
+        q.offer(s);
+
+        while (!q.isEmpty()) {
+            int node = q.poll();
+            processNode(node);
+            for (int i:this.adjListArr[node]) {
+                if (!visited[i]) {
+                    visited[i] = true;
+                    q.add(i);
+                }
+            }
+        }
+    }
+
+    public void DFS(int s) {
+        DFSHelper(s,new boolean[this.v]);
+    }
+
+    private void DFSHelper(int s, boolean[] visited) {
+        visited[s] = true;
+        processNode(s);
+
+        for (int i:this.adjListArr[s]) {
+            if (!visited[i]) DFSHelper(i,visited);
+        }
+    }
+
+    private void processNode(Integer i) {
+        System.out.println(i + " ");
     }
 
     public void printGraph() {
@@ -43,6 +80,9 @@ public class Graph {
 
         // print the adjacency list representation of
         // the above graph
-        graph.printGraph();
+        //graph.printGraph();
+
+        //graph.BFS(0);
+        graph.DFS(0);
     }
 }
