@@ -1,4 +1,4 @@
-package list_design;
+package main.java.list_design;
 
 /*
 707. Design Linked List
