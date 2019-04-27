@@ -1,4 +1,4 @@
-package Trie;
+package main.java.Trie;
 
 public class TrieNode {
     boolean isEnd;
