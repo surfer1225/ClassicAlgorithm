@@ -35,8 +35,6 @@ public class BalanceTransactions {
             (e.getValue()>0?positiveBalances:negBalances).put(e.getKey(), Math.abs(e.getValue()));
         }
 
-        removeSameValue(positiveBalances, negBalances);
-
         return constructMinTransactionList(positiveBalances, negBalances);
     }
 
@@ -44,6 +42,8 @@ public class BalanceTransactions {
                                                           Map<Integer, Double> negBalances) {
         List<Transaction> list = new LinkedList<>();
         if (positiveBalances.isEmpty()) return list;
+
+        removeSameValue(positiveBalances, negBalances, list);
 
         Iterator<Map.Entry<Integer, Double>> negIt = negBalances.entrySet().iterator();
         Iterator<Map.Entry<Integer, Double>> posIt = positiveBalances.entrySet().iterator();
@@ -87,7 +87,7 @@ public class BalanceTransactions {
         return list;
     }
 
-    private void removeSameValue(Map<Integer, Double> positiveMap, Map<Integer, Double> negMap) {
+    private void removeSameValue(Map<Integer, Double> positiveMap, Map<Integer, Double> negMap, List<Transaction> list) {
         Set<Map.Entry<Integer, Double>> entries = positiveMap.entrySet();
         Set<Map.Entry<Integer, Double>> negEntries = negMap.entrySet();
 
@@ -96,6 +96,7 @@ public class BalanceTransactions {
                 if (e.getValue() == negE.getValue()) {
                     positiveMap.remove(e.getKey());
                     negMap.remove(negE.getKey());
+                    list.add(new Transaction(negE.getKey(), e.getKey(), e.getValue()));
                 }
             }
         }
