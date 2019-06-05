@@ -1,4 +1,4 @@
-package main.java.MySet;
+package main.java.myset;
 
 import java.util.HashSet;
 import java.util.Iterator;

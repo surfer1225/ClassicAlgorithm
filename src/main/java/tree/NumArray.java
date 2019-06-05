@@ -1,4 +1,4 @@
-package main.java.Tree;
+package main.java.tree;
 
 /*
 303. Range Sum Query - Immutable

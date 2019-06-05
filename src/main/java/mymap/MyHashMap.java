@@ -1,4 +1,4 @@
-package main.java.MyMap;
+package main.java.mymap;
 
 import java.util.LinkedList;
 import java.util.List;

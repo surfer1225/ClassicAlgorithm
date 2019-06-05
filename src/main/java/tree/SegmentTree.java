@@ -1,4 +1,4 @@
-package main.java.Tree;
+package main.java.tree;
 
 /*
 Segment tree is a very flexible data structure,

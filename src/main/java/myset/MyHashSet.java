@@ -1,4 +1,4 @@
-package main.java.MySet;
+package main.java.myset;
 
 import java.util.LinkedList;
 import java.util.List;

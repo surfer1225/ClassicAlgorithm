@@ -1,4 +1,4 @@
-package main.java.Trie;
+package main.java.trie;
 
 /*
 Design a data structure that supports the following two operations:
