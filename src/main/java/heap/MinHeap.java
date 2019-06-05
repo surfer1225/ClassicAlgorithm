@@ -1,4 +1,4 @@
-package heap;
+package main.java.heap;
 
 public class MinHeap {
 

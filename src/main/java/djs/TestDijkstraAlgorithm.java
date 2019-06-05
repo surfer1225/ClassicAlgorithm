@@ -1,4 +1,4 @@
-package DJS;
+package main.java.djs;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

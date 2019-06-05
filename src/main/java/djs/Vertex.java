@@ -1,4 +1,4 @@
-package DJS;
+package main.java.djs;
 
 /**
  * Created by Ryan on 5/5/18.

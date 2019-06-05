@@ -1,4 +1,4 @@
-package QuadTree;
+package main.java.quadtree;
 
 public class QuadTree {
     public Node construct(int[][] grid) {
